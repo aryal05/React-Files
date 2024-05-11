@@ -1,0 +1,21 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.product{
+    border: 1px solid red;
+    padding: 1rem;
+    border-radius: 9px;
+    margin-bottom: 1rem;
+    width: 400px;
+   
+
+}
+img{
+    max-width: 100%;
+}

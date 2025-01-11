@@ -1,57 +1,46 @@
 import axios from "axios";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const ApiFetch = () => {
   const [products, setProducts] = useState([]);
-  // const [loading, setLoading] = useState(false);
-  const [searchInput, setSearchInput] = useState("")
+  const [searchInput, setSearchInput] = useState("");
 
+  function fetchData() {
+    if (!searchInput.trim()) {
+      setProducts([]); // Clear products if input is empty
+      return;
+    }
 
-  function handleSubmit(e){
-    e.preventDefault();
-    fetchData()
-  }
-
-
-  function fetchData(){
-    
     axios
       .get(`https://dummyjson.com/products/search?q=${searchInput}`)
       .then((res) => {
         setProducts(res.data.products);
-       
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
-  
   }
-  useEffect(()=>{
-    fetchData()
 
-  },[searchInput]); // EveryTime there is Chnage in SearchInput, useEffect re-runs..
- 
-    
-    
-
+  useEffect(() => {
+    fetchData();
+  }, [searchInput]);
 
   return (
     <>
-      <h1>Api Link</h1>
-
-      <form onSubmit={handleSubmit}>
-        <input value={searchInput} onChange ={(e)=>{
-          setSearchInput(e.target.value)
-        }} type="text" />
-        <button>Search</button>
-      </form>
+      <h1>API Link</h1>
+      <input
+        value={searchInput}
+        onChange={(e) => setSearchInput(e.target.value)}
+        type="text"
+        placeholder="Search for products..."
+      />
       <ul>
         {products.map((product) => (
-          <li key = {product.id}>{product.title}</li>
+          <li key={product.id}>{product.title}</li>
         ))}
       </ul>
     </>
-)
+  );
 };
+
 export default ApiFetch;

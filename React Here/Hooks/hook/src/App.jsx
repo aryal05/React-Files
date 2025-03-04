@@ -10,6 +10,10 @@ function App() {
 //   setCounter(counter)
 //   console.log("Clicked", counter)
 // }
+
+// Reconciliation: The Algorithm React uses to diff one tree with another tree to determine which part need to be changed. 
+
+
 let [counter ,setCounter] = useState(0)
   return (
     <>

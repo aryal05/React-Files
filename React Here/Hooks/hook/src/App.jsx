@@ -12,7 +12,7 @@ function App() {
 // }
 
 // Reconciliation: The Algorithm React uses to diff one tree with another tree to determine which part need to be changed. 
-
+//It is the algorith behind what popularly understood as virtual dom. 
 
 let [counter ,setCounter] = useState(0)
   return (

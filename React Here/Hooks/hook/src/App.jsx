@@ -22,7 +22,7 @@ let [counter ,setCounter] = useState(0)
       <button className='bg-black mr-6 text-white rounded' onClick={() => setCounter(counter + 1)}>Add Value</button>
       <button className='bg-black text-white rounded' onClick={() => setCounter(Math.max(0, counter - 1))}>Delete Value</button>
       </div> */}
-      <Card />
+      <Card props = {"props here"} />
      
     </>
   )

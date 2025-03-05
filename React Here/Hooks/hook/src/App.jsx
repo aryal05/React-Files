@@ -16,12 +16,13 @@ function App() {
 let [counter ,setCounter] = useState(0)
   return (
     <>
-     <h1>React with Chai.</h1>
+     {/* <h1>React with Chai.</h1>
       <h2>Counter Value: {counter}</h2> 
       <div className='p-2'>
       <button className='bg-black mr-6 text-white rounded' onClick={() => setCounter(counter + 1)}>Add Value</button>
       <button className='bg-black text-white rounded' onClick={() => setCounter(Math.max(0, counter - 1))}>Delete Value</button>
-      </div>
+      </div> */}
+      <Card />
      
     </>
   )

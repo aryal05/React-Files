@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = (props) => {
+const Card = ({props = "visit me"}) => {
   return (
     <div class="container mx-4 my-4">
   <div class="w-64 border rounded-2xl">
@@ -8,7 +8,7 @@ const Card = (props) => {
     <div class="p-4">
       <h5 class="text-sm text-gray-500 font-bold tracking-widest mb-2 uppercase">Hello World</h5>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, rem.</p>
-      <a href="#" class="bg-green-500 hover:bg-green-400 text-white px-4 py-2 inline-block mt-4 rounded">Read more</a>
+      <a href="#" class="bg-green-500 hover:bg-green-400 text-white px-4 py-2 inline-block mt-4 rounded">{props}</a>
     </div>
   </div>
   

@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Card from './components/Card'
 
 function App() {
 // let counter = 5;
@@ -18,9 +17,12 @@ let [counter ,setCounter] = useState(0)
   return (
     <>
      <h1>React with Chai.</h1>
-      <h2>Counter Value: {counter}</h2>
-      <button onClick={() => setCounter(counter + 1)}>Add Value</button>
-      <button onClick={() => setCounter(Math.max(0, counter - 1))}>Delete Value</button>
+      <h2>Counter Value: {counter}</h2> 
+      <div className='p-2'>
+      <button className='bg-black mr-6 text-white rounded' onClick={() => setCounter(counter + 1)}>Add Value</button>
+      <button className='bg-black text-white rounded' onClick={() => setCounter(Math.max(0, counter - 1))}>Delete Value</button>
+      </div>
+     
     </>
   )
 }

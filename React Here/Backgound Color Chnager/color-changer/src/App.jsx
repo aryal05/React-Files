@@ -10,12 +10,12 @@ function App() {
       <p className="px-10 py-8 font-medium text-2xl">Here You can Change The Color of The Background As You Want It To Be.</p>
       <div className="fixed flex flex-wrap justify-center bottom-12 px-2 inset-x-0">
         <div className="flex flex-wrap gap-3 bg-white rounded-xl shadow-lg px-3 py-2">
-          <button className="outline-none px-4 py-2 shadow-lg bg-red-500 rounded-full text-white cursor-pointer">Red</button>
-          <button className="outline-none px-4 py-2 shadow-lg bg-black rounded-full text-white cursor-pointer">Black</button>
-          <button className="outline-none px-4 py-2 shadow-lg bg-pink-500 rounded-full text-white cursor-pointer">Pink</button>
-          <button className="outline-none px-4 py-2 shadow-lg bg-green-500 rounded-full text-white cursor-pointer">Green</button>
-          <button className="outline-none px-4 py-2 shadow-lg bg-white rounded-full text-black cursor-pointer">White</button>
-          <button className="outline-none px-4 py-2 shadow-lg bg-blue-500 rounded-full text-white cursor-pointer">Blue</button>
+          <button onClick={()=>setColor("red")} className="outline-none px-4 py-2 shadow-lg bg-red-500 rounded-full text-white cursor-pointer">Red</button>
+          <button onClick={()=> setColor("black")} className="outline-none px-4 py-2 shadow-lg bg-black rounded-full text-white cursor-pointer">Black</button>
+          <button onClick={()=> setColor("pink")} className="outline-none px-4 py-2 shadow-lg bg-pink-500 rounded-full text-white cursor-pointer">Pink</button>
+          <button onClick={()=> setColor("green")} className="outline-none px-4 py-2 shadow-lg bg-green-500 rounded-full text-white cursor-pointer">Green</button>
+          <button onClick={()=> setColor("white")} className="outline-none px-4 py-2 shadow-lg bg-white rounded-full text-black cursor-pointer">White</button>
+          <button onClick={()=> setColor("blue")} className="outline-none px-4 py-2 shadow-lg bg-blue-500 rounded-full text-white cursor-pointer">Blue</button>
         </div>
       </div> 
 

@@ -27,17 +27,24 @@ function App() {
       <div className='flex shadow rounded-lg overflow-hidden mb-4'>
         <input type="text" value={password} className='outline-none w-full py-1 px-3' placeholder='Password' readOnly />
         <button className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'>Copy</button>
-        <div className='flex text-m gap-x-2'>
+      </div>
+      <div className='flex text-m gap-x-2'>
           <div className='flex items-center gap-x-1'>
             <input type="range" name="" id=""
             min={6}
             max={100}
-            value={length} />
+            value={length}
+            className='cursor-pointer'
+            onChange={(e)=>{setLength(e.target.value)}} />
+            <label htmlFor="">Length: {length}</label>
           </div>
+          <div className='flex items-center gap-x-1'>
+            <input type="checkbox" name="" id=""
+            defaultChecked={number}
+            onChange={(e)=>{setNumber(e.target.checked)}} />
+          </div>
+          <label htmlFor="">Numbers</label>
         </div>
-
-
-      </div>
     </div>
     
     </>

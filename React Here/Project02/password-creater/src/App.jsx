@@ -1,4 +1,4 @@
-import { useState,useCallback } from 'react'
+import { useState,useCallback, useEffect } from 'react'
 
 
 function App() {
@@ -10,8 +10,8 @@ function App() {
   const passswordGenerator = useCallback(()=>{
     let pass = "";
     let st = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    if(number) str+="0123456789"
-    if(char) str+="!@#$%^&*()_+"
+    if(number) st+="0123456789"
+    if(char) st+="!@#$%^&*()_+"
     for(let i=1;i<=length;i++){
       pass += st.charAt(Math.floor(Math.random()*st.length))
 
@@ -20,6 +20,9 @@ function App() {
 
 
   },[length, number, char, setPasssword])
+useEffect(()=>{
+  passswordGenerator()
+},[length, number, char, setPasssword])
   return (
     <>
     <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 my-8 text-orange-500 bg-gray-800'>
@@ -41,13 +44,13 @@ function App() {
           <div className='flex items-center gap-x-1'>
             <input type="checkbox" name="" id=""
             defaultChecked={number}
-            onChange={(e)=>{setNumber(e.target.checked)}} />
+            onChange={()=>{setNumber((number)=>!number)}} />
           </div>
           <label htmlFor="">Numbers</label>
           <div className='flex items-center gap-x-1'>
             <input type="checkbox" name="" id=""
             defaultChecked={char}
-            onChange={(e)=>{setChar(e.target.checked)}} />
+            onChange={()=>{setChar((char)=>!char)}} />
           </div>
           <label htmlFor="">Characters</label>
         </div>

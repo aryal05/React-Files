@@ -26,7 +26,7 @@ useEffect(()=>{
   return (
     <>
     <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 my-8 text-orange-500 bg-gray-800'>
-      <h className='text-3xl text-center my-4'>Password Generator</h>
+      <h1 className='text-3xl text-center my-4'>Password Generator</h1>
       <div className='flex shadow rounded-lg overflow-hidden mb-4'>
         <input type="text" value={password} className='outline-none w-full py-1 px-3' placeholder='Password' readOnly />
         <button className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'>Copy</button>

@@ -1,12 +1,19 @@
 import { useState } from 'react'
-import './App.css'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [length, setLength] = useState(8) // initial length of password
+  const [number, setNumber] = useState(false);
+  const [char, setChar] = useState (false);
+  const [password, setPasssword] = useState("")
 
+  const passswordGenerator = ()=>{
+
+  }
   return (
     <>
-     <h1 className='text-2xl text-center'>Password Generater</h1>
+     <h1 className='text-4xl text-center text-white'>Password Generater</h1>
+
     </>
   )
 }

@@ -44,7 +44,15 @@ function App() {
             onChange={(e)=>{setNumber(e.target.checked)}} />
           </div>
           <label htmlFor="">Numbers</label>
+          <div className='flex items-center gap-x-1'>
+            <input type="checkbox" name="" id=""
+            defaultChecked={char}
+            onChange={(e)=>{setChar(e.target.checked)}} />
+          </div>
+          <label htmlFor="">Characters</label>
         </div>
+        
+        
     </div>
     
     </>

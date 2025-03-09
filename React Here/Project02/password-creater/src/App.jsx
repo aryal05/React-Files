@@ -1,4 +1,4 @@
-import { useState,useCallback, useEffect } from 'react'
+import { useState,useCallback, useEffect,useRef } from 'react'
 
 
 function App() {
@@ -6,6 +6,10 @@ function App() {
   const [number, setNumber] = useState(false);
   const [char, setChar] = useState (false);
   const [password, setPasssword] = useState("")
+
+
+  //UesRef hook
+  const passwordRef = useRef(null)
 
   const passswordGenerator = useCallback(()=>{
     let pass = "";

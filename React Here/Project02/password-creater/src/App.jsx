@@ -30,7 +30,7 @@ function App() {
     window.navigator.clipboard.writeText(password)
   },[password])
 
-useEffect(()=>{
+useEffect(()=>{ // when component mounts
   passswordGenerator()
 },[length, number, char, setPasssword])
   return (

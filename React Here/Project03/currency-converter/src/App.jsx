@@ -6,9 +6,7 @@ function App() {
 
   return (
     <>
-      <div>
-        hello
-      </div>
+      <h1 className='text-3xl text-center mx-2 my-4'>Currency App</h1>
     </>
   )
 }

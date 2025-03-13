@@ -4,7 +4,7 @@ function InputBox({
     onAmountChange,
     onCurrencyChange,
     currencyOptions = [],
-    selectCurrency = "Usdi",
+    selectCurrency = "Usd",
     amountDisable = false,
     currencyDisable = false,
     
@@ -13,7 +13,7 @@ function InputBox({
    
 
     return (
-        <div className={`bg-white p-3 rounded-lg text-sm flex `}>
+        <div className={`bg-white p-3 rounded-lg text-sm flex ${className} `}>
             <div className="w-1/2">
                 <label  className="text-black/40 mb-2 inline-block">
                     {label}
@@ -25,7 +25,7 @@ function InputBox({
                     placeholder="Amount"
                     disabled = {amountDisable}
                     value={amount}
-                    onChange={(e) => onAmountChange(Number(e.target.value))}
+                    onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
                 />
             </div>
             <div className="w-1/2 flex flex-wrap justify-end text-right">

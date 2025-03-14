@@ -11,6 +11,13 @@ const[convertedAmount, setConvertedAmount]= useState(0)
 const currencyInfo = useCurrencyInfo(from)
 const options = Object.keys(currencyInfo)
 
+const swap =()=>{
+  setFrom(to)
+  setTo(from)
+  setConvertedAmount(amount)
+  setAmount(convertedAmount)
+}
+
   return (
     <>
       <h1 className='text-3xl text-center mx-2 my-4 bg-orange-500'>Currency App</h1>

@@ -31,12 +31,16 @@ const convert = ()=>{setConvertedAmount(amount*currencyInfo[to])}
                     <form
                         onSubmit={(e) => {
                             e.preventDefault();
+                            convert()
                            
                         }}
                     >
                         <div className="w-full mb-1">
                             <InputBox
                                 label="From"
+                                amount={amount}
+                                currencyOptions={options}
+                                onCurrencyChange={(currency)=> setAmount(amount)}
                                 
                             />
                         </div>

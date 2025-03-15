@@ -23,7 +23,7 @@ const convert = ()=>{setConvertedAmount(amount*currencyInfo[to])}
      <div
             className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
             style={{
-                // backgroundImage: `url('${BackgroundImage}')`,
+                backgroundImage: `url("https://images.pexels.com/photos/31008030/pexels-photo-31008030/free-photo-of-vibrant-night-skyline-of-osaka-japan.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load")`,
             }}
         >
             <div className="w-full">
@@ -41,6 +41,7 @@ const convert = ()=>{setConvertedAmount(amount*currencyInfo[to])}
                                 amount={amount}
                                 currencyOptions={options}
                                 onCurrencyChange={(currency)=> setAmount(amount)}
+                                selectCurrency={from}
                                 
                             />
                         </div>
@@ -48,7 +49,7 @@ const convert = ()=>{setConvertedAmount(amount*currencyInfo[to])}
                             <button
                                 type="button"
                                 className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5"
-                                
+                                onClick={swap}
                             >
                                 swap
                             </button>
@@ -56,11 +57,15 @@ const convert = ()=>{setConvertedAmount(amount*currencyInfo[to])}
                         <div className="w-full mt-1 mb-4">
                             <InputBox
                                 label="To"
-                                
+                                amount={convertedAmount}
+                                currencyOptions={options}
+                                onCurrencyChange={(currency)=> setTo(currency)}
+                                selectCurrency={from}
+                                amountDisable
                             />
                         </div>
                         <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
-                            Convert 
+                            Convert {from.toUpperCase()} to {to.toUpperCase()}
                         </button>
                     </form>
                 </div>
